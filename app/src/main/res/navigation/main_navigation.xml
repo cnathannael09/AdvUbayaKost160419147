@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="com.ubaya.ubayakost160419147.view.KostListFragment"
+        android:label="fragment_kost_list"
+        tools:layout="@layout/fragment_kost_list" >
+        <action
+            android:id="@+id/actionKostDetail"
+            app:destination="@id/kostDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kostDetailFragment"
+        android:name="com.ubaya.ubayakost160419147.view.KostDetailFragment"
+        android:label="fragment_kost_detail"
+        tools:layout="@layout/fragment_kost_detail" >
+        <action
+            android:id="@+id/actionDetailList"
+            app:destination="@id/itemHome" />
+        <argument
+            android:name="namaKost"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemProfile"
+        android:name="com.ubaya.ubayakost160419147.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/actionProfileAbout"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/actionProfilePusat"
+            app:destination="@id/pusatBantuanFragment" />
+        <action
+            android:id="@+id/actionProfileSyarat"
+            app:destination="@id/syaratDanKetentuanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.ubaya.ubayakost160419147.view.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/actionAboutProfile"
+            app:destination="@id/itemProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/pusatBantuanFragment"
+        android:name="com.ubaya.ubayakost160419147.view.PusatBantuanFragment"
+        android:label="fragment_pusat_bantuan"
+        tools:layout="@layout/fragment_pusat_bantuan" >
+        <action
+            android:id="@+id/actionPusatProfile"
+            app:destination="@id/itemProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/syaratDanKetentuanFragment"
+        android:name="com.ubaya.ubayakost160419147.view.SyaratDanKetentuanFragment"
+        android:label="fragment_syarat_dan_ketentuan"
+        tools:layout="@layout/fragment_syarat_dan_ketentuan" >
+        <action
+            android:id="@+id/actionSyaratProfile"
+            app:destination="@id/itemProfile" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemSaya"
+        android:name="com.ubaya.ubayakost160419147.view.KostSayaFragment"
+        android:label="KostSayaFragment" >
+        <action
+            android:id="@+id/actionSayaDetail"
+            app:destination="@id/kostDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFav"
+        android:name="com.ubaya.ubayakost160419147.view.KostFavoriteFragment"
+        android:label="KostFavoriteFragment" >
+        <action
+            android:id="@+id/actionFavDetail"
+            app:destination="@id/kostDetailFragment" />
+    </fragment>
+</navigation>
