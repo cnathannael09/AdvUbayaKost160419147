@@ -71,17 +71,9 @@
     <fragment
         android:id="@+id/itemSaya"
         android:name="com.ubaya.ubayakost160419147.view.KostSayaFragment"
-        android:label="KostSayaFragment" >
-        <action
-            android:id="@+id/actionSayaDetail"
-            app:destination="@id/kostDetailFragment" />
-    </fragment>
+        android:label="KostSayaFragment" />
     <fragment
         android:id="@+id/itemFav"
         android:name="com.ubaya.ubayakost160419147.view.KostFavoriteFragment"
-        android:label="KostFavoriteFragment" >
-        <action
-            android:id="@+id/actionFavDetail"
-            app:destination="@id/kostDetailFragment" />
-    </fragment>
+        android:label="KostFavoriteFragment" />
 </navigation>
